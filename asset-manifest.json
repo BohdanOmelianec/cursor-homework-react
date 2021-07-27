@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cursor-homework-react/static/css/main.e25391d2.chunk.css",
+    "main.js": "/cursor-homework-react/static/js/main.87972ea4.chunk.js",
+    "main.js.map": "/cursor-homework-react/static/js/main.87972ea4.chunk.js.map",
+    "runtime-main.js": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js",
+    "runtime-main.js.map": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js.map",
+    "static/js/2.7af55382.chunk.js": "/cursor-homework-react/static/js/2.7af55382.chunk.js",
+    "static/js/2.7af55382.chunk.js.map": "/cursor-homework-react/static/js/2.7af55382.chunk.js.map",
+    "index.html": "/cursor-homework-react/index.html",
+    "static/css/main.e25391d2.chunk.css.map": "/cursor-homework-react/static/css/main.e25391d2.chunk.css.map",
+    "static/js/2.7af55382.chunk.js.LICENSE.txt": "/cursor-homework-react/static/js/2.7af55382.chunk.js.LICENSE.txt",
+    "static/media/ava.77289e4f.jpg": "/cursor-homework-react/static/media/ava.77289e4f.jpg",
+    "static/media/tweet.abcd22f9.gif": "/cursor-homework-react/static/media/tweet.abcd22f9.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39c5bdd3.js",
+    "static/js/2.7af55382.chunk.js",
+    "static/css/main.e25391d2.chunk.css",
+    "static/js/main.87972ea4.chunk.js"
+  ]
+}
