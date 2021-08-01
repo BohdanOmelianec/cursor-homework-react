@@ -42,7 +42,7 @@ span {
     margin: 5px;
 }
 
-span:not(.author_name) {
+.author_nickname .post_date {
     color: #a5a5a5
 }
 
