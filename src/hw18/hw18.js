@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css'
 
 const male = 'https://image.flaticon.com/icons/png/512/1340/1340619.png';
@@ -97,8 +97,9 @@ function Contact(props) {
 
 function Contracts() {
     const [contactsArr, setContacts] = useState(contacts);
+    const [search, setSearch] = useState('');
 
-    const handleCheckbox = (e) => {
+    const handleCheckbox = () => {
         const inputs = document.querySelectorAll('input[type="checkbox"]:checked')
         let checkedBoxes = [];
     
@@ -115,9 +116,14 @@ function Contracts() {
     
         setContacts(filteredContacts);
     }
-    
+
     const handleSearchChange = (event) => {
-        const regExp = new RegExp(event.target.value, 'gi');
+        setSearch(event.target.value)
+    
+        
+    }
+    useEffect(() => {
+        const regExp = new RegExp(search, 'gi');
 
         let filteredContacts = contacts.filter((contact => {
             let match = false;
@@ -133,13 +139,19 @@ function Contracts() {
         }));
 
         setContacts(filteredContacts);
-    }
+    }, [search])
 
     return(
         <div className="inner">
             <div className="container_hw18">
                 <h2 className="title">Contacts</h2>
-                <input className="search_input" placeholder="SEARCH" type="search" name="search" onChange={handleSearchChange}/>
+                <input 
+                    className="search_input" 
+                    placeholder="SEARCH" 
+                    type="search" 
+                    name="search" 
+                    onChange={handleSearchChange} 
+                    value={search}/>
                 <CheckboxFilter onChange={handleCheckbox}/>
                 {contactsArr.map(contact => 
                     <Contact key={contact.id} contact={contact}/>
