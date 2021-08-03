@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './style.css'
+import './style18.css'
 
 const male = 'https://image.flaticon.com/icons/png/512/1340/1340619.png';
 const female = 'https://image.flaticon.com/icons/png/512/766/766514.png';
@@ -99,11 +99,34 @@ function Contracts() {
     const [contactsArr, setContacts] = useState(contacts);
     const [search, setSearch] = useState('');
 
+    useEffect(() => {
+        const inputs2 = document.querySelectorAll('input[type="checkbox"]');
+        inputs2.forEach(input => {
+            input.checked = true
+        });
+    }, [])
+
+    const handleSearchChange = (event) => {
+        setSearch(event.target.value)
+    }
+
+    useEffect(() => {
+        const regExp = new RegExp(search, 'gi');
+
+        const filteredContacts = contacts.filter(contact => {
+            return Object.values(contact).some(item => 
+                item.toString().search(regExp) >= 0
+            );
+        });
+
+        setContacts(filteredContacts);
+    }, [search])
+
     const handleCheckbox = () => {
-        const inputs = document.querySelectorAll('input[type="checkbox"]:checked')
+        const checkedInputs = document.querySelectorAll('input[type="checkbox"]:checked');
         let checkedBoxes = [];
     
-        inputs.forEach(input => {
+        checkedInputs.forEach(input => {
                 checkedBoxes.push(input.value)
         });
     
@@ -116,30 +139,6 @@ function Contracts() {
     
         setContacts(filteredContacts);
     }
-
-    const handleSearchChange = (event) => {
-        setSearch(event.target.value)
-    
-        
-    }
-    useEffect(() => {
-        const regExp = new RegExp(search, 'gi');
-
-        let filteredContacts = contacts.filter((contact => {
-            let match = false;
-    
-            for ( let key in contact ) {
-                if (contact[key].toString().search(regExp) >= 0) {
-                    match = true;
-                    break;
-                }
-            }
-
-            return match; 
-        }));
-
-        setContacts(filteredContacts);
-    }, [search])
 
     return(
         <div className="inner">
@@ -158,8 +157,7 @@ function Contracts() {
                 )}
             </div>
         </div>       
-    )
-        
+    ) 
 }
 
 export default Contracts;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './style17.css';
 import icon from './ava.jpg';
 import gif from './tweet.gif';
 
