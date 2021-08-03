@@ -33,7 +33,9 @@ function App() {
             <React.Fragment>
                 <Links />
                 <div id="content">
-                    <Route path='/home' component={Home}/>
+                    <Home />
+
+                    {/* <Route path='/' /> */}
                     <Route path='/load' component={Load}/>
                     <Route path='/contracts' component={Contracts}/>
                 </div>
