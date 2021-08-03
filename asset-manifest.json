@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.0a777d74.chunk.css",
-    "main.js": "/home/static/js/main.fd33ae4d.chunk.js",
-    "main.js.map": "/home/static/js/main.fd33ae4d.chunk.js.map",
-    "runtime-main.js": "/home/static/js/runtime-main.13d60a7e.js",
-    "runtime-main.js.map": "/home/static/js/runtime-main.13d60a7e.js.map",
-    "static/js/2.270a892d.chunk.js": "/home/static/js/2.270a892d.chunk.js",
-    "static/js/2.270a892d.chunk.js.map": "/home/static/js/2.270a892d.chunk.js.map",
-    "index.html": "/home/index.html",
-    "static/css/main.0a777d74.chunk.css.map": "/home/static/css/main.0a777d74.chunk.css.map",
-    "static/js/2.270a892d.chunk.js.LICENSE.txt": "/home/static/js/2.270a892d.chunk.js.LICENSE.txt",
-    "static/media/ava.77289e4f.jpg": "/home/static/media/ava.77289e4f.jpg",
-    "static/media/react.b4f7daa5.png": "/home/static/media/react.b4f7daa5.png",
-    "static/media/tweet.abcd22f9.gif": "/home/static/media/tweet.abcd22f9.gif"
+    "main.css": "/cursor-homework-react/static/css/main.0a777d74.chunk.css",
+    "main.js": "/cursor-homework-react/static/js/main.fd33ae4d.chunk.js",
+    "main.js.map": "/cursor-homework-react/static/js/main.fd33ae4d.chunk.js.map",
+    "runtime-main.js": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js",
+    "runtime-main.js.map": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js.map",
+    "static/js/2.270a892d.chunk.js": "/cursor-homework-react/static/js/2.270a892d.chunk.js",
+    "static/js/2.270a892d.chunk.js.map": "/cursor-homework-react/static/js/2.270a892d.chunk.js.map",
+    "index.html": "/cursor-homework-react/index.html",
+    "static/css/main.0a777d74.chunk.css.map": "/cursor-homework-react/static/css/main.0a777d74.chunk.css.map",
+    "static/js/2.270a892d.chunk.js.LICENSE.txt": "/cursor-homework-react/static/js/2.270a892d.chunk.js.LICENSE.txt",
+    "static/media/ava.77289e4f.jpg": "/cursor-homework-react/static/media/ava.77289e4f.jpg",
+    "static/media/react.b4f7daa5.png": "/cursor-homework-react/static/media/react.b4f7daa5.png",
+    "static/media/tweet.abcd22f9.gif": "/cursor-homework-react/static/media/tweet.abcd22f9.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.13d60a7e.js",
+    "static/js/runtime-main.39c5bdd3.js",
     "static/js/2.270a892d.chunk.js",
     "static/css/main.0a777d74.chunk.css",
     "static/js/main.fd33ae4d.chunk.js"
