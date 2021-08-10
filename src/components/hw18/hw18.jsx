@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style18.css'
-import { NavLink, Route, useParams, useRouteMatch } from 'react-router-dom';
+import { NavLink, Route, useRouteMatch } from 'react-router-dom';
 
 const male = 'https://image.flaticon.com/icons/png/512/1340/1340619.png';
 const female = 'https://image.flaticon.com/icons/png/512/766/766514.png';
