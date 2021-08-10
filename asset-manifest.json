@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/cursor-homework-react/home/static/css/main.63fe7a4c.chunk.css",
-    "main.js": "/cursor-homework-react/home/static/js/main.e1eb6dbd.chunk.js",
-    "main.js.map": "/cursor-homework-react/home/static/js/main.e1eb6dbd.chunk.js.map",
-    "runtime-main.js": "/cursor-homework-react/home/static/js/runtime-main.a8390d8c.js",
-    "runtime-main.js.map": "/cursor-homework-react/home/static/js/runtime-main.a8390d8c.js.map",
-    "static/js/2.df0494a2.chunk.js": "/cursor-homework-react/home/static/js/2.df0494a2.chunk.js",
-    "static/js/2.df0494a2.chunk.js.map": "/cursor-homework-react/home/static/js/2.df0494a2.chunk.js.map",
-    "index.html": "/cursor-homework-react/home/index.html",
-    "static/css/main.63fe7a4c.chunk.css.map": "/cursor-homework-react/home/static/css/main.63fe7a4c.chunk.css.map",
-    "static/js/2.df0494a2.chunk.js.LICENSE.txt": "/cursor-homework-react/home/static/js/2.df0494a2.chunk.js.LICENSE.txt",
-    "static/media/ava.77289e4f.jpg": "/cursor-homework-react/home/static/media/ava.77289e4f.jpg",
-    "static/media/react.b4f7daa5.png": "/cursor-homework-react/home/static/media/react.b4f7daa5.png",
-    "static/media/tweet.abcd22f9.gif": "/cursor-homework-react/home/static/media/tweet.abcd22f9.gif"
+    "main.css": "/cursor-homework-react/static/css/main.63fe7a4c.chunk.css",
+    "main.js": "/cursor-homework-react/static/js/main.e1eb6dbd.chunk.js",
+    "main.js.map": "/cursor-homework-react/static/js/main.e1eb6dbd.chunk.js.map",
+    "runtime-main.js": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js",
+    "runtime-main.js.map": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js.map",
+    "static/js/2.df0494a2.chunk.js": "/cursor-homework-react/static/js/2.df0494a2.chunk.js",
+    "static/js/2.df0494a2.chunk.js.map": "/cursor-homework-react/static/js/2.df0494a2.chunk.js.map",
+    "index.html": "/cursor-homework-react/index.html",
+    "static/css/main.63fe7a4c.chunk.css.map": "/cursor-homework-react/static/css/main.63fe7a4c.chunk.css.map",
+    "static/js/2.df0494a2.chunk.js.LICENSE.txt": "/cursor-homework-react/static/js/2.df0494a2.chunk.js.LICENSE.txt",
+    "static/media/ava.77289e4f.jpg": "/cursor-homework-react/static/media/ava.77289e4f.jpg",
+    "static/media/react.b4f7daa5.png": "/cursor-homework-react/static/media/react.b4f7daa5.png",
+    "static/media/tweet.abcd22f9.gif": "/cursor-homework-react/static/media/tweet.abcd22f9.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.a8390d8c.js",
+    "static/js/runtime-main.39c5bdd3.js",
     "static/js/2.df0494a2.chunk.js",
     "static/css/main.63fe7a4c.chunk.css",
     "static/js/main.e1eb6dbd.chunk.js"
