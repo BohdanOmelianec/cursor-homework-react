@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/cursor-homework-react/static/css/main.a0a5b962.chunk.css",
-    "main.js": "/cursor-homework-react/static/js/main.e108480b.chunk.js",
-    "main.js.map": "/cursor-homework-react/static/js/main.e108480b.chunk.js.map",
-    "runtime-main.js": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js",
-    "runtime-main.js.map": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js.map",
-    "static/js/2.270a892d.chunk.js": "/cursor-homework-react/static/js/2.270a892d.chunk.js",
-    "static/js/2.270a892d.chunk.js.map": "/cursor-homework-react/static/js/2.270a892d.chunk.js.map",
-    "index.html": "/cursor-homework-react/index.html",
-    "static/css/main.a0a5b962.chunk.css.map": "/cursor-homework-react/static/css/main.a0a5b962.chunk.css.map",
-    "static/js/2.270a892d.chunk.js.LICENSE.txt": "/cursor-homework-react/static/js/2.270a892d.chunk.js.LICENSE.txt",
-    "static/media/ava.77289e4f.jpg": "/cursor-homework-react/static/media/ava.77289e4f.jpg",
-    "static/media/react.b4f7daa5.png": "/cursor-homework-react/static/media/react.b4f7daa5.png",
-    "static/media/tweet.abcd22f9.gif": "/cursor-homework-react/static/media/tweet.abcd22f9.gif"
+    "main.css": "/static/css/main.63fe7a4c.chunk.css",
+    "main.js": "/static/js/main.e1eb6dbd.chunk.js",
+    "main.js.map": "/static/js/main.e1eb6dbd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.caa73ea5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.caa73ea5.js.map",
+    "static/js/2.df0494a2.chunk.js": "/static/js/2.df0494a2.chunk.js",
+    "static/js/2.df0494a2.chunk.js.map": "/static/js/2.df0494a2.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.63fe7a4c.chunk.css.map": "/static/css/main.63fe7a4c.chunk.css.map",
+    "static/js/2.df0494a2.chunk.js.LICENSE.txt": "/static/js/2.df0494a2.chunk.js.LICENSE.txt",
+    "static/media/ava.77289e4f.jpg": "/static/media/ava.77289e4f.jpg",
+    "static/media/react.b4f7daa5.png": "/static/media/react.b4f7daa5.png",
+    "static/media/tweet.abcd22f9.gif": "/static/media/tweet.abcd22f9.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.39c5bdd3.js",
-    "static/js/2.270a892d.chunk.js",
-    "static/css/main.a0a5b962.chunk.css",
-    "static/js/main.e108480b.chunk.js"
+    "static/js/runtime-main.caa73ea5.js",
+    "static/js/2.df0494a2.chunk.js",
+    "static/css/main.63fe7a4c.chunk.css",
+    "static/js/main.e1eb6dbd.chunk.js"
   ]
 }
