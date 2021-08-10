@@ -11,7 +11,7 @@ import { Route, NavLink, Switch } from 'react-router-dom'
 function NavLinks() {
     return (
         <div className='nav_links'>
-            <NavLink exact to='/' className='main_link active'>Home</NavLink>
+            <NavLink exact={true} to='/' className='main_link active'>Home</NavLink>
             <NavLink to='/load' className='main_link'>Homework 17</NavLink>
             <NavLink to='/contracts' className='main_link'>Homework 18</NavLink>
             <NavLink to='/photo' className='main_link'>Photos</NavLink>
