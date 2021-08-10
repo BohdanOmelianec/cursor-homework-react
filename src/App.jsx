@@ -1,46 +1,37 @@
 import React from 'react';
 import './style.css';
-import Load from './hw17/hw17';
-import Contracts from './hw18/hw18';
-import Home from './Home';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Tweets from './components/hw17/hw17';
+import Contracts from './components/hw18/hw18';
+import Home from './components/Home';
+import Photos from './components/Photo';
+import { Route, NavLink, Switch } from 'react-router-dom'
 
 
 
-function Links() {
-    const clickHandler = (e) => {
-    const links = document.querySelectorAll('.main_link');
-
-        links.forEach(link => {
-            link.style.color = 'rgb(209, 209, 209)';
-        })
-        
-        e.target.style.color = 'rgb(33, 219, 243)';
-    }
-
+function NavLinks() {
     return (
         <div className='nav_links'>
-            <Link className='main_link' to='/home' onClick={clickHandler}>Home</Link>
-            <Link className='main_link' to='/load' onClick={clickHandler}>Homework 17</Link>
-            <Link className='main_link' to='/contracts' onClick={clickHandler}>Homework 18</Link>
+            <NavLink exact to='/' className='main_link'>Home</NavLink>
+            <NavLink to='/load' className='main_link'>Homework 17</NavLink>
+            <NavLink to='/contracts' className='main_link'>Homework 18</NavLink>
+            <NavLink to='/photo' className='main_link'>Photos</NavLink>
         </div>
     )
 }
 
 function App() {
     return (
-        <Router>
-            <React.Fragment>
-                <Links />
-                <div id="content">
-                    <Home />
-
-                    {/* <Route path='/' /> */}
-                    <Route path='/load' component={Load}/>
+        <>
+            <NavLinks />
+            <div id="content">
+                <Switch>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/load' component={Tweets}/>
                     <Route path='/contracts' component={Contracts}/>
-                </div>
-            </React.Fragment>
-        </Router>
+                    <Route path='/photo' component={Photos}/>
+                </Switch>
+            </div> 
+        </>
     )
 }
 

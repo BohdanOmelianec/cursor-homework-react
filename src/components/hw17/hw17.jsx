@@ -8,12 +8,12 @@ const ANAKIN_IMAGE = "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anaki
 const RAY_IMAGE = "https://specials-images.forbesimg.com/imageserve/5e63b3c8e1e617000759130e/960x0.jpg?fit=scale";
 
 
-function Author(props) {
+function Author({user, date}) {
   return (
     <div className="author_block">
-        <span className="author_name">{props.user.name}</span>
-        <span className="author_nickname">{props.user.nickname}</span>
-        <span className="post_date">{props.date}</span>
+        <span className="author_name">{user.name}</span>
+        <span className="author_nickname">{user.nickname}</span>
+        <span className="post_date">{date}</span>
     </div>
   )
 }
@@ -89,29 +89,38 @@ function Post(props) {
   );
 }
 
-function Load() {
+function Tweets() {
   return (
     <div>
       <Post author={{
-      name: "Anakin Skywalker",
-      photo: ANAKIN_IMAGE,
-      nickname: "@dart_vader"
-   }}
-   content="WTF? Who is Ray? Why she is Skywalker? Luke...?"
-   image={RAY_IMAGE}
-   date={"26 Feb."}
-   />,
-   <Post author={{
-    name: "Twitter",
-    photo: icon,
-    nickname: "@Twitter"
-  }}
-  content="You are what you Tweet."
-  image={gif}
-  date={"30 June"}
-  />
+        name: "Anakin Skywalker",
+        photo: ANAKIN_IMAGE,
+        nickname: "@dart_vader"
+      }}
+      content="WTF? Who is Ray? Why she is Skywalker? Luke...?"
+      image={RAY_IMAGE}
+      date={"26 Feb."}
+      />,
+      <Post author={{
+        name: "Twitter",
+        photo: icon,
+        nickname: "@Twitter"
+      }}
+      content="You are what you Tweet."
+      image={gif}
+      date={"30 June"}
+      />
+      <Post author={{
+        name: "Epravda",
+        photo: 'https://www.epravda.com.ua/images/v3/ep_symbol.svg',
+        nickname: "@epravda"
+      }}
+      content="Минулого тижня ціни на газ в Європі досягали нових рекордів"
+      image={'https://eimg.pravda.com/images/doc/e/7/e7713a7-------.jpg'}
+      date={"9 Aug"}
+      />
     </div>
   )
 }
 
-export default Load;
+export default Tweets;

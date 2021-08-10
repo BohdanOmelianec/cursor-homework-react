@@ -18,7 +18,7 @@ body {
     background-color: rgb(27, 27, 27);
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 5;
     width: 100%;
     box-shadow: 0 0 27px 25px rgb(27, 27, 27);
 }
@@ -30,19 +30,26 @@ body {
     color: rgb(209, 209, 209);
     padding: 15px;
 }
-.main_link:first-child {
-    color: rgb(33, 219, 243);
-}
 
 .main_link:hover {
     color: rgb(33, 219, 243);
 }
 
-/* Content */
-#content {
-    margin-top: 80px;
+.active {
+    color: rgb(33, 219, 243);
 }
 
+/* Content */
+#content {
+    /* margin-top: 80px; */
+    padding: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Home page */
 #logo_box {
     width: 500px;
     margin: 0 auto;
@@ -80,4 +87,17 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+/* Photo box */
+.photo_box {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo_box img {
+    margin: 10px 0;
 }

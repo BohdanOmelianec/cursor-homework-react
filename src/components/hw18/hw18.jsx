@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style18.css'
+import { NavLink, Route, useParams, useRouteMatch } from 'react-router-dom';
 
 const male = 'https://image.flaticon.com/icons/png/512/1340/1340619.png';
 const female = 'https://image.flaticon.com/icons/png/512/766/766514.png';
@@ -80,24 +81,53 @@ function CheckboxFilter (props) {
     )
 }
 
-function Contact(props) {
+function Contact({contact}) {
+    const match = useRouteMatch();
+    const [top, setTop] = useState(0);
+
+    const clickHandler = (e) => {
+        setTop(e.target.offsetTop);
+    }
+
     return(
         <div className="contact_box">
             <div className="content_box_user">
                 <img src={user_icon} className="user" alt="user"></img>
-                <span>{`${props.contact.firstName} ${props.contact.lastName}`}</span>
-                <img className="gender" src={props.contact.gender === "male" ? male : props.contact.gender === "female" ? female : unknown} alt="gender"></img>
+                <NavLink to={`${match.url}/${contact.firstName}/${contact.id}`}  onClick={clickHandler}>
+                    <span  className="user_link" >{`${contact.firstName} ${contact.lastName}`}</span>
+                </NavLink>
+                <img className="gender" src={contact.gender === "male" ? male : contact.gender === "female" ? female : unknown} alt="gender"></img>
             </div>
-            <p>{props.contact.phone}</p>
-            
+            <p>{contact.phone}</p>
+
+            <Route path={`${match.url}/${contact.firstName}/:id`}>
+                <ContactInfo contact={contact} top={top} />
+            </Route>
             <hr/>
         </div> 
+    )
+}
+
+function ContactInfo({contact, top}) {
+    useEffect(() => {
+        document.querySelector('.contact_info').style.top = `${top - 30}px`;
+    });
+
+    return(
+        <div className='contact_info'>
+            <p><b>{contact.firstName}</b></p>
+            <p><b>{contact.lastName}</b></p>
+            <p>{contact.phone}</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos aperiam ut distinctio iure sapiente consectetur repellendus enim facere inventore explicabo iste eum alias voluptate cum dolor dicta, aliquid eaque.</p>
+        </div>
     )
 }
 
 function Contracts() {
     const [contactsArr, setContacts] = useState(contacts);
     const [search, setSearch] = useState('');
+    
+
 
     useEffect(() => {
         const inputs2 = document.querySelectorAll('input[type="checkbox"]');
@@ -150,7 +180,8 @@ function Contracts() {
                     type="search" 
                     name="search" 
                     onChange={handleSearchChange} 
-                    value={search}/>
+                    value={search}
+                />
                 <CheckboxFilter onChange={handleCheckbox}/>
                 {contactsArr.map(contact => 
                     <Contact key={contact.id} contact={contact}/>
