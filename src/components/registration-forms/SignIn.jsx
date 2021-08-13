@@ -110,7 +110,7 @@ const Footer = styled.footer`
 `;
 
 export default function SignIn(props) {
-    const user = localStorage.user ? JSON.parse(localStorage.user) : null;
+    const user = localStorage.user ? JSON.parse(localStorage.user) : {};
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [disabled, setDisable] = useState(true);
@@ -121,9 +121,10 @@ export default function SignIn(props) {
     const passCheck = new RegExp(/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}/);
    
     useEffect(() => {
-        setEmail(JSON.parse(localStorage.remember) ? user.email : '');
-        setPassword(JSON.parse(localStorage.remember) ? user.pass : '');
-        setCheck(JSON.parse(localStorage.remember) ? JSON.parse(localStorage.remember) : false);
+        console.log("useEffect", !!localStorage.remember)
+        setEmail(localStorage.remember === 'true' ? user.email : '');
+        setPassword(localStorage.remember === 'true' ? user.pass : '');
+        setCheck(localStorage.remember === 'true' ? JSON.parse(localStorage.remember) : false);
     },[user.email, user.pass]);
 
     useEffect(() => {
@@ -191,7 +192,7 @@ export default function SignIn(props) {
                     value='Sign In' 
                     onClick={(e) => {
                         e.preventDefault();
-                        const user = JSON.parse(localStorage.user);
+                        const user = localStorage.user ? JSON.parse(localStorage.user) : {};
 
                         if(user.email === email && user.pass === password) {
                             setRedirect(true)

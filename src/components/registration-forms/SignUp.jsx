@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 const Wrapper = styled.div`
@@ -116,6 +116,7 @@ export default function SignIn() {
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
     const [disabled, setDisable] = useState(true);
+    const [redirect, setRedirect] = useState(false);
 
     const emailCheck = new RegExp(/^\S{3,}@\S{2,}\.\D{2,}/);
     const passCheck = new RegExp(/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}/);
@@ -126,6 +127,10 @@ export default function SignIn() {
             setDisable(false);
         }
     }, [name, lastName, email, password])
+
+    if(redirect) {
+        return <Redirect to='/sign-in' />
+    }
 
     return(
         <Wrapper>
@@ -188,7 +193,7 @@ export default function SignIn() {
                     placeholder='Password *' 
                     onChange={ e =>  {
                         const et = e.target;
-                        
+
                         if(et.value === '') {
                             et.style.borderColor = '#424242'
                         } else if (et.value.match(passCheck)) {
@@ -214,6 +219,7 @@ export default function SignIn() {
                             email: email,
                             pass: password,
                         });
+                        setRedirect(true);
                     }}/>
                 <Questions>
                     <span></span>
