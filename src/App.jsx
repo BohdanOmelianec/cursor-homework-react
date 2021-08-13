@@ -9,23 +9,28 @@ import SignOut from './components/registration-forms/SignOut';
 function Sign(props) {
     if(props.status) {
         return <NavLink to='/sign-out' className='main_link'>Sign out</NavLink>
+
     } 
     return( 
-    <>
-        <NavLink to='/sign-in' className='main_link'>Sign in</NavLink>
-        <NavLink to='/sign-up' className='main_link'>Sign up</NavLink>
-    </>
+        <>
+            <NavLink to='/sign-in' className='main_link'>Sign in</NavLink>
+            <NavLink to='/sign-up' className='main_link'>Sign up</NavLink>
+        </>
     )}
 
 
 function NavLinks(props) {
     return (
         <div className='nav_links'>
-            <NavLink exact to='/cursor-homework-react' className='main_link'>Home</NavLink>
-            <NavLink to='/tweets' className='main_link'>Homework 17</NavLink>
-            <NavLink to='/contracts' className='main_link'>Homework 18</NavLink>
-            <NavLink to='/photo' className='main_link'>Photos</NavLink>
-            <Sign status={props.status}/>
+            <div className='main_links'>
+                <NavLink exact to='/cursor-homework-react' className='main_link'>Home</NavLink>
+                <NavLink to='/tweets' className='main_link'>Homework 17</NavLink>
+                <NavLink to='/contracts' className='main_link'>Homework 18</NavLink>
+                <NavLink to='/photo' className='main_link'>Photos</NavLink>
+            </div>
+            <div className='form_links'>
+                <Sign status={props.status}/>
+            </div>
             
             
         </div>

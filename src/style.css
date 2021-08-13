@@ -19,6 +19,8 @@ body {
     position: fixed;
     top: 0;
     z-index: 5;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     box-shadow: 0 0 27px 25px rgb(27, 27, 27);
 }
