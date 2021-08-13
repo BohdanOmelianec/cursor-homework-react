@@ -1,29 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
-import Tweets from './components/hw17/hw17';
-import Contracts from './components/hw18/hw18';
-import Home from './components/Home';
-import Photos from './components/Photo';
 import { Route, NavLink, Switch } from 'react-router-dom';
 import routes from './components/routes';
+import SignIn from './components/registration-forms/SignIn';
+import SignOut from './components/registration-forms/SignOut';
 
 
+function Sign(props) {
+    if(props.status) {
+        return <NavLink to='/sign-out' className='main_link'>Sign out</NavLink>
+    } 
+    return( 
+    <>
+        <NavLink to='/sign-in' className='main_link'>Sign in</NavLink>
+        <NavLink to='/sign-up' className='main_link'>Sign up</NavLink>
+    </>
+    )}
 
-function NavLinks() {
+
+function NavLinks(props) {
     return (
         <div className='nav_links'>
             <NavLink exact to='/cursor-homework-react' className='main_link'>Home</NavLink>
             <NavLink to='/tweets' className='main_link'>Homework 17</NavLink>
             <NavLink to='/contracts' className='main_link'>Homework 18</NavLink>
             <NavLink to='/photo' className='main_link'>Photos</NavLink>
+            <Sign status={props.status}/>
+            
+            
         </div>
     )
 }
 
 function App() {
+    const [isOnline, setOnline] = useState(localStorage.status ? JSON.parse(localStorage.status) : false);
+
+    const statusHendler = () => {
+        setOnline(!isOnline);
+    }
+
     return (
         <>
-            <NavLinks />
+            <NavLinks status={isOnline}/>
             <div id="content">
                 <Switch>
                     {
@@ -37,6 +55,12 @@ function App() {
                             </Route>
                         ))
                     }
+                    <Route exact path='/sign-in'>
+                        <SignIn listener={statusHendler}/>
+                    </Route>
+                    <Route exact path='/sign-out'>
+                        <SignOut listener={statusHendler}/>
+                    </Route>
                 </Switch>
             </div> 
         </>
