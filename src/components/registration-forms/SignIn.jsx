@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled from 'styled-components';
 import { Link, Redirect } from 'react-router-dom';
 
 const Wrapper = styled.div`
