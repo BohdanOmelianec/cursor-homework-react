@@ -110,7 +110,7 @@ const Footer = styled.footer`
 `;
 
 export default function SignIn(props) {
-    const user = JSON.parse(localStorage.user) || null;
+    const user = localStorage.user ? JSON.parse(localStorage.user) : null;
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [disabled, setDisable] = useState(true);
