@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/cursor-homework-react/static/css/main.c8017a60.chunk.css",
-    "main.js": "/cursor-homework-react/static/js/main.64a8d35d.chunk.js",
-    "main.js.map": "/cursor-homework-react/static/js/main.64a8d35d.chunk.js.map",
+    "main.js": "/cursor-homework-react/static/js/main.0faad1fd.chunk.js",
+    "main.js.map": "/cursor-homework-react/static/js/main.0faad1fd.chunk.js.map",
     "runtime-main.js": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js",
     "runtime-main.js.map": "/cursor-homework-react/static/js/runtime-main.39c5bdd3.js.map",
-    "static/js/2.797ad701.chunk.js": "/cursor-homework-react/static/js/2.797ad701.chunk.js",
-    "static/js/2.797ad701.chunk.js.map": "/cursor-homework-react/static/js/2.797ad701.chunk.js.map",
+    "static/js/2.a2ffda59.chunk.js": "/cursor-homework-react/static/js/2.a2ffda59.chunk.js",
+    "static/js/2.a2ffda59.chunk.js.map": "/cursor-homework-react/static/js/2.a2ffda59.chunk.js.map",
     "index.html": "/cursor-homework-react/index.html",
     "static/css/main.c8017a60.chunk.css.map": "/cursor-homework-react/static/css/main.c8017a60.chunk.css.map",
-    "static/js/2.797ad701.chunk.js.LICENSE.txt": "/cursor-homework-react/static/js/2.797ad701.chunk.js.LICENSE.txt",
+    "static/js/2.a2ffda59.chunk.js.LICENSE.txt": "/cursor-homework-react/static/js/2.a2ffda59.chunk.js.LICENSE.txt",
     "static/media/ava.77289e4f.jpg": "/cursor-homework-react/static/media/ava.77289e4f.jpg",
     "static/media/react.b4f7daa5.png": "/cursor-homework-react/static/media/react.b4f7daa5.png",
     "static/media/tweet.abcd22f9.gif": "/cursor-homework-react/static/media/tweet.abcd22f9.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.39c5bdd3.js",
-    "static/js/2.797ad701.chunk.js",
+    "static/js/2.a2ffda59.chunk.js",
     "static/css/main.c8017a60.chunk.css",
-    "static/js/main.64a8d35d.chunk.js"
+    "static/js/main.0faad1fd.chunk.js"
   ]
 }
