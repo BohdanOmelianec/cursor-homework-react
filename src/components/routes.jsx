@@ -1,3 +1,5 @@
+import AddUser from './AddUser';
+import Users from './Users';
 import Home from './Home';
 import Tweets from './hw17/hw17';
 import Contracts from './hw18/hw18';
@@ -25,21 +27,21 @@ const routes = [
         component: <Photos />,
         exact: true,
     },
-    // {
-    //     path: '/sign-in',
-    //     component: <SignIn />,
-    //     exact: true,
-    // },
+    {
+        path: '/users',
+        component: <Users />,
+        exact: true,
+    },
+    {
+        path: '/add-user',
+        component: <AddUser />,
+        exact: true,
+    },
     {
         path: '/sign-up',
         component: <SignUp />,
         exact: true,
     },
-    // {
-    //     path: '/sign-out',
-    //     component: <SignOut />,
-    //     exact: true,
-    // },
 ];
 
 export default routes;

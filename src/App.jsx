@@ -27,6 +27,8 @@ function NavLinks(props) {
                 <NavLink to='/tweets' className='main_link'>Homework 17</NavLink>
                 <NavLink to='/contracts' className='main_link'>Homework 18</NavLink>
                 <NavLink to='/photo' className='main_link'>Photos</NavLink>
+                <NavLink to='/users' className='main_link'>Users</NavLink>
+                <NavLink to='/add-user' className='main_link'>Add user</NavLink>
             </div>
             <div className='form_links'>
                 <Sign status={props.status}/>

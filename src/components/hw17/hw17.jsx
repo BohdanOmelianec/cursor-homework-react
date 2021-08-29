@@ -237,7 +237,7 @@ function Post({item}) {
 }
 
 function Tweets() {
-  const postsArr = useSelector(state => state.data);
+  const postsArr = useSelector(state => state.reduser.data);
   return (
     <>
       {postsArr.map(item => <Post key={item.content.toString()} item={item}/>)}
