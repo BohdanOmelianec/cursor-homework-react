@@ -1,12 +1,33 @@
 import React, {useState} from 'react';
 // import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
 
 export default function AddUser() {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
-    const [link, setLink] = useState('');
+    const [avatar, setAvatar] = useState('');
+    const dispatch = useDispatch();
 
+    
+    const saveUser = () => async () => {
+        const user = {
+            name,
+            username: `@${username}`,
+            avatar
+        }
+        await fetch('http://domer.tech:9999/users', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+    }
+
+    const addUser = () => {
+        dispatch(saveUser())
+    }
 
     return (
         <Wrapper>
@@ -34,30 +55,16 @@ export default function AddUser() {
               type='text'
               reqired 
               placeholder='Link *'
-              value={link}
+              value={avatar}
               onChange={ e =>  {
-                setLink(e.target.value)
+                setAvatar(e.target.value)
               }}>
           </Input>
           
           <SubmitInput 
               type='submit' 
-              value='Add post' 
-              onClick={e => {
-                e.preventDefault();
-                fetch('https://jsonplaceholder.typicode.com/posts/', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        title: 'foo',
-                        body: 'bar',
-                        userId: 1,
-                      })
-                })
-                    .then(resp => resp.json())
-                    .then(json => console.log(json))
-                    
-               
-              }}/>
+              value='Add user' 
+              onClick={addUser}/>
         </SignInForm>
         
 

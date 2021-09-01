@@ -1,10 +1,11 @@
 import AddUser from './AddUser';
-import Users from './Users';
+import UserTweets from './UserTweets';
 import Home from './Home';
 import Tweets from './hw17/hw17';
 import Contracts from './hw18/hw18';
 import Photos from './Photo';
 import SignUp from './registration-forms/SignUp';
+import AddTweet from './AddTweet';
 
 const routes = [
     {
@@ -28,13 +29,18 @@ const routes = [
         exact: true,
     },
     {
-        path: '/users',
-        component: <Users />,
+        path: '/user-tweets',
+        component: <UserTweets />,
         exact: true,
     },
     {
         path: '/add-user',
         component: <AddUser />,
+        exact: true,
+    },
+    {
+        path: '/add-tweet',
+        component: <AddTweet />,
         exact: true,
     },
     {
